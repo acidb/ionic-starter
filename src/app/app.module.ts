@@ -1,4 +1,4 @@
-import { MbscModule, mobiscroll } from '@mobiscroll/angular';
+import { MbscModule } from '@mobiscroll/angular';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { mobiscroll } from '@mobiscroll/angular';
 
 mobiscroll.settings = {
   theme: 'ios'
