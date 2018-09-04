@@ -1,19 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 import { SettingsPage } from '../settings/settings';
 import { ContactPage } from '../profile/profile';
 import { HomePage } from '../home/home';
+import { NavController } from 'ionic-angular';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = SettingsPage;
-  tab3Root = ContactPage;
+  @ViewChild('nav')
+  nav: NavController;
 
-  constructor() {
+  root = HomePage;
 
+  pages = [
+    { name: 'Home', comp: HomePage, icon: 'ios-home' },
+    { name: 'Settings', comp: SettingsPage, icon: 'ios-cog' },
+    { name: 'Contact', comp: ContactPage, icon: 'ios-person' }];
+
+  navigateTo(page: any): void {
+    this.nav.setRoot(page.comp);
+  }
+
+  selected(page: any): boolean {
+    const activeView = this.nav.getActive();
+    return activeView && activeView.component === page.comp;
   }
 }

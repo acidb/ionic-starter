@@ -1,5 +1,6 @@
-<ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="ios-home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Settings" tabIcon="ios-cog"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="ios-person"></ion-tab>
-</ion-tabs>
+<ion-nav #nav [root]="root"></ion-nav>
+<mbsc-bottom-nav #bn="mobiscroll">
+  <mbsc-nav-item *ngFor="let page of pages" [icon]="page.icon" (click)="navigateTo(page)" [selected]="selected(page)">
+    {{page.name}}
+  </mbsc-nav-item>
+</mbsc-bottom-nav>

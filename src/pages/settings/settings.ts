@@ -5,11 +5,6 @@ import { Component } from '@angular/core';
     templateUrl: 'settings.html'
 })
 export class SettingsPage {
-
-    contentSettings = {
-        theme: 'ios'
-    };
-
     sound = {
         ring: 100,
         media: 60,

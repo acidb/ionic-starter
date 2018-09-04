@@ -5,13 +5,15 @@
 </ion-header>
 
 <ion-content>
-  <mbsc-form>
-    <mbsc-input [(ngModel)]="todoDate" mbsc-calendar>Date</mbsc-input>
-  </mbsc-form>
-  <mbsc-listview [options]="todoList" mbsc-enhance>
-    <mbsc-listview-item *ngFor="let item of todoData" data-id="{{item.id}}">
-      {{item.text}}
-      <input type="checkbox">
-    </mbsc-listview-item>
-  </mbsc-listview>
+  <mbsc-page>
+    <mbsc-form>
+      <mbsc-calendar [(ngModel)]="todoDate">Date</mbsc-calendar>
+    </mbsc-form>
+    <mbsc-listview [options]="todoList" mbsc-enhance>
+      <mbsc-listview-item *ngFor="let item of todoData" data-id="{{item.id}}">
+        {{item.text}}
+        <input type="checkbox">
+      </mbsc-listview-item>
+    </mbsc-listview>
+  </mbsc-page>
 </ion-content>
