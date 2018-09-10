@@ -16,9 +16,10 @@ export class TabsPage {
   root = HomePage;
 
   pages = [
-    { name: 'Home', comp: HomePage, icon: 'ios-home' },
-    { name: 'Settings', comp: SettingsPage, icon: 'ios-cog' },
-    { name: 'Contact', comp: ContactPage, icon: 'ios-person' }];
+    { name: 'Home', comp: HomePage, icon: 'home' },
+    { name: 'Settings', comp: SettingsPage, icon: 'cogs' },
+    { name: 'Contact', comp: ContactPage, icon: 'user4' }
+  ];
 
   navigateTo(page: any): void {
     this.nav.setRoot(page.comp);
