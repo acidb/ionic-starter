@@ -1,6 +1,7 @@
 import { MbscModule } from '@mobiscroll/angular';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { JsonpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -32,6 +33,7 @@ mobiscroll.settings = {
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    JsonpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
