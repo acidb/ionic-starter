@@ -1,19 +1,28 @@
 import { Component } from '@angular/core';
+import { MbscDatetimeOptions } from '@mobiscroll/angular';
 
 @Component({
   selector: 'page-profile',
   templateUrl: 'profile.html'
 })
 export class ContactPage {
-  now: Date = new Date();
-  langData = [{ value: 'en', text: 'English' }, { value: 'de', text: 'Deutsch' }, { value: 'it', text: 'Italiano' }];
+  now = new Date();
+  langData = [{
+    value: 'en',
+    text: 'English'
+  }, {
+    value: 'de',
+    text: 'Deutsch'
+  }, {
+    value: 'it',
+    text: 'Italiano'
+  }];
 
-  birthdaySettings = {
+  birthdaySettings: MbscDatetimeOptions = {
     max: new Date(this.now.getFullYear() - 18, 11, 31)
   };
 
   birthday = new Date(1987, 2, 25);
   language = 'en';
   gender = 'female';
-
 }
